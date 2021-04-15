@@ -26,7 +26,7 @@ function session_php_main()
 	else
 	{
 	    $cookie_path = $_SERVER['PHP_SELF'];
-	    $cookie_path = preg_replace('[^/]*$', '', $cookie_path);
+	    $cookie_path = ereg_replace('[^/]*$', '', $cookie_path);
 	}
 	session_set_cookie_params(0, $cookie_path);
 	session_start();
